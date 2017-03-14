@@ -1,0 +1,30 @@
+* {margin: 0;}
+html, body {height: 100%;}
+
+a {text-decoration: none}
+a:hover {text-decoration: underline;}
+/* footer {} */
+ul pre, ol pre {display: inline-block;}
+
+.toc {padding: 20px}
+.w3-code {border-color: #e0e;}
+#rtd-search-form {padding-top: 0 !important}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -100px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 100px; 
+}
+.site-footer {
+  background: orange;
+  padding-top: 38px;
+  text-align: center;
+  color:white;
+}

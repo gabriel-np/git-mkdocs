@@ -1,0 +1,24 @@
+<!-- Side Navigation -->
+<nav class="w3-sidenav w3-white w3-card-2 w3-animate-left" style="display:none">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-xxxlarge w3-text-theme">Fermer <i class="fa fa-times"></i></a>
+  <ul>
+    {% for nav_item in nav %}
+        {% if nav_item.children %}
+            <li>{{ nav_item.title }}
+                <ul>
+                {% for nav_item in nav_item.children %}
+                    <li class="{% if nav_item.active%}current{%endif%}">
+                        <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </li>
+        {% else %}
+            <li class="{% if nav_item.active%}current{%endif%}">
+                <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+            </li>
+        {% endif %}
+  
+    {% endfor %}
+  </ul>
+</nav>

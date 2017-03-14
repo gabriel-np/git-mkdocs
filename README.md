@@ -12,5 +12,5 @@ $ mkdocs serve
 
 #### Site Build
 ```
-mkdocs build
+$ mkdocs build
 ```
